@@ -1,0 +1,38 @@
+{
+  "title": "Employee resource",
+  "description": "Employee resource object",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "employee id",
+      "type": "integer"
+    },
+    "first_name": {
+      "description": "first name",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "last_name": {
+      "description": "last name",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "date_of_birth": {
+      "description": "date of birth(dd/MM/yyyy)",
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    "address": {
+      "description": "address",
+      "type": "object",
+      "javaType": "com.paypal.bfs.test.employeeserv.entity.AddressEntity"
+    }
+  },
+  "required": [
+    "first_name",
+    "last_name"
+  ]
+}
